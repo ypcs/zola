@@ -563,9 +563,9 @@ fn load_csv(csv_data: String) -> Result<Value> {
 /// }
 /// ```
 fn load_xml(xml_data: String) -> Result<Value> {
-    let xml_content: Value =
-        libs::quickxml_to_serde::xml_string_to_json(xml_data, &Default::default())
-            .map_err(|e| format!("{:?}", e))?;
+    let xml_content: Value = libs::xml2json_rs::JsonBuilder::default()
+        .build_from_xml(&xml_data)
+        .map_err(|e| format!("{:?}", e))?;
     Ok(xml_content)
 }
 

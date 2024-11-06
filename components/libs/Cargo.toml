@@ -23,7 +23,6 @@ once_cell = "1"
 percent-encoding = "2"
 pulldown-cmark = { version = "0.11", default-features = false, features = ["html", "simd"] }
 pulldown-cmark-escape = { version = "0.11", default-features = false }
-quickxml_to_serde = "0.6"
 rayon = "1"
 regex = "1"
 relative-path = "1"
@@ -44,6 +43,7 @@ unicode-segmentation = "1.2"
 url = "2"
 walkdir = "2"
 webp = "0.3"
+xml2json-rs = "1.0.1"
 
 
 [features]

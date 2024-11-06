@@ -2111,7 +2111,6 @@ dependencies = [
  "percent-encoding",
  "pulldown-cmark",
  "pulldown-cmark-escape",
- "quickxml_to_serde",
  "rayon",
  "regex",
  "relative-path",
@@ -2131,6 +2130,7 @@ dependencies = [
  "url",
  "walkdir",
  "webp",
+ "xml2json-rs",
 ]
 
 [[package]]
@@ -2472,15 +2472,6 @@ checksum = "4192263c238a5f0d0c6bfd21f336a313a4ce1c450542449ca191bb657b4642ef"
 dependencies = [
  "mime",
  "unicase",
-]
-
-[[package]]
-name = "minidom"
-version = "0.12.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fe549115a674f5ec64c754d85e37d6f42664bd0ef4ffb62b619489ad99c6cb1a"
-dependencies = [
- "quick-xml 0.17.2",
 ]
 
 [[package]]
@@ -3353,9 +3344,9 @@ checksum = "a993555f31e5a609f617c12db6250dedcac1b0a85076912c436e6fc9b2c8e6a3"
 
 [[package]]
 name = "quick-xml"
-version = "0.17.2"
+version = "0.23.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fe1e430bdcf30c9fdc25053b9c459bb1a4672af4617b6c783d7d91dc17c6bbb0"
+checksum = "11bafc859c6815fbaffbbbf4229ecb767ac913fecb27f9ad4343662e9ef099ea"
 dependencies = [
  "memchr",
 ]
@@ -3367,19 +3358,6 @@ source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "1004a344b30a54e2ee58d66a71b32d2db2feb0a31f9a2d302bf0536f15de2a33"
 dependencies = [
  "memchr",
-]
-
-[[package]]
-name = "quickxml_to_serde"
-version = "0.6.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "286b05c7a00b356ff6ac5218e10d628e0a3be02e777d067ca7286d353c3c407e"
-dependencies = [
- "minidom",
- "regex",
- "serde",
- "serde_derive",
- "serde_json",
 ]
 
 [[package]]
@@ -5142,6 +5120,19 @@ dependencies = [
  "libc",
  "linux-raw-sys",
  "rustix",
+]
+
+[[package]]
+name = "xml2json-rs"
+version = "1.0.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "c6ba4fb1256176d2eb02e25065efade8e43215a4d0743cb823991aea314077ea"
+dependencies = [
+ "lazy_static",
+ "quick-xml 0.23.1",
+ "regex",
+ "serde",
+ "serde_json",
 ]
 
 [[package]]
